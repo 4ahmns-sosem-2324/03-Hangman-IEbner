@@ -18,6 +18,7 @@ public class GameManagement : MonoBehaviour
 
     void Start()
     {
+        feedbackText.text = "";
         StartGame();
         inputField.onEndEdit.AddListener(ProcessGuess);
     }
@@ -102,10 +103,12 @@ public class GameManagement : MonoBehaviour
         if (wordGuessed)
         {
             feedbackText.text = "Congratulations! You guessed the word: " + wordToGuess;
+            inputField.gameObject.SetActive(false);
         }
         else if (attempts == 0)
         {
             feedbackText.text = "Sorry, you ran out of attempts. The word was: " + wordToGuess;
+            inputField.gameObject.SetActive(false);
         }
     }
 
