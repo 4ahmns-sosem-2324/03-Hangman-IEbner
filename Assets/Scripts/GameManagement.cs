@@ -112,7 +112,7 @@ public class GameManagement : MonoBehaviour
         }
     }
 
-    public void Restart()
+    public void Reload()
     {
         SceneManager.LoadScene(0);
     }
