@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class GameManagement : MonoBehaviour
 {
@@ -106,5 +107,10 @@ public class GameManagement : MonoBehaviour
         {
             feedbackText.text = "Sorry, you ran out of attempts. The word was: " + wordToGuess;
         }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(0);
     }
 }
